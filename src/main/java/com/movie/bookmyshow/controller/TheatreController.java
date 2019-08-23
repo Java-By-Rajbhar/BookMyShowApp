@@ -17,7 +17,6 @@ import com.movie.bookmyshow.dto.TheatreResponseDto;
 import com.movie.bookmyshow.service.TheatreService;
 
 @RequestMapping("/api")
-@CrossOrigin(allowedHeaders = {"*","/"},origins ={"*","/"})
 @RestController
 @CrossOrigin(allowedHeaders = { "*", "/" }, origins = { "*", "/" })
 public class TheatreController {
