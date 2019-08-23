@@ -28,7 +28,5 @@ public class Theatre {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer theatreId;
 	private String theatreName;
-	
-
 
 }

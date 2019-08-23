@@ -24,16 +24,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table
-public class Movie implements Serializable{
-	
+public class Movie implements Serializable {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer movieId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int movieId;
 	private String movieName;
 	private double price;
 	private String restricted;
