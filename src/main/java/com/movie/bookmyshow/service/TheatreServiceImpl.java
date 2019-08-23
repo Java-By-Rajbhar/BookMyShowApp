@@ -28,7 +28,7 @@ private static final Logger logger  = LoggerFactory.getLogger(TheatreServiceImpl
 	public int getAvailableSeatBasedOnThreatre(String theatreName) {
 		logger.info("inside getAvailableSeatBasedOnThreatre method of TheatreServiceImpl class");
 		Theatre theatre = theatreRepository.findByTheatreName(theatreName);
-		return theatre.getAvailableSeat();
+		return 1;
 	}
 
 }
