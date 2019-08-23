@@ -25,15 +25,9 @@ public class TheatreController {
 	@Autowired
 	TheatreService theatreService;
 
-	@GetMapping("/availableSeat/{theatreName}")
-	public ResponseEntity<Integer> getAvailableSeat(@PathVariable String theatreName) {
-		logger.info("inside getAvailableSeat method of TheatreController class");
-		int availableSeat = theatreService.getAvailableSeatBasedOnThreatre(theatreName);
-		return new ResponseEntity<Integer>(availableSeat, HttpStatus.OK);
-	}
 	
 	@GetMapping("/theatres/{movieId}")
-	public ResponseEntity<List<TheatreResponseDto>>getAllTheatres(@PathVariable String movieId)
+	public ResponseEntity<List<TheatreResponseDto>>getAllTheatres(@PathVariable int movieId)
 	{
 		logger.info("inside getAvailableSeat method of TheatreController class");
       List<TheatreResponseDto> listOfTheatres = theatreService.getAllTheatres(movieId);

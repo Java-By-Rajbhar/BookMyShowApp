@@ -11,22 +11,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * 
- * @author Sushil
- *
- */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table
-public class Theatre {
-	
+public class Seat {
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer seatId;
 	private Integer theatreId;
-	private String theatreName;
+	private Integer totalSeat;
+	private Integer availableSeat;
 
 }

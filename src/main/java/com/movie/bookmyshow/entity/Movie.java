@@ -1,5 +1,7 @@
 package com.movie.bookmyshow.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,17 +18,24 @@ import lombok.Setter;
  * @author Sushil
  *
  */
-@Getter
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table
-public class Theatre {
+public class Movie implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer theatreId;
-	private String theatreName;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int movieId;
+	private String movieName;
+	private double price;
+	private String restricted;
+	private String viewLink;
 
 }

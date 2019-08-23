@@ -13,6 +13,6 @@ public interface TheatreService {
 	
 
 
-	public List<TheatreResponseDto> getAllTheatres(String movieId);
+	public List<TheatreResponseDto> getAllTheatres(int movieId);
 
 }

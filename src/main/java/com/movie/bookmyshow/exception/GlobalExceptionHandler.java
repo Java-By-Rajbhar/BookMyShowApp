@@ -12,19 +12,24 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  *
  */
 @ControllerAdvice
-public class GlobalExceptionHandler extends ResponseEntityExceptionHandler{
-	
+public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+
 	/**
 	 * This method is use to handle exception globally
+	 * 
 	 * @param ex
 	 * @return ResponseEntity<ResponseError>
 	 */
 	@ExceptionHandler(Exception.class)
-	public ResponseEntity<ResponseError> exceptionHandler(Exception ex)
-	{
-		ResponseError error =  new ResponseError(ex.getMessage(), HttpStatus.NOT_FOUND.value());
+	public ResponseEntity<ResponseError> exceptionHandler(Exception ex) {
+		ResponseError error = new ResponseError(ex.getMessage(), HttpStatus.NOT_FOUND.value());
 		return new ResponseEntity<ResponseError>(error, HttpStatus.NOT_FOUND);
 	}
-	
+
+	@ExceptionHandler(TheatresNotFoundException.class)
+	private ResponseEntity<ResponseError> TheatreNothandlerExceptions(TheatresNotFoundException ex) {
+		ResponseError errorResponse = new ResponseError(ex.getMessage(), HttpStatus.NOT_FOUND.value());
+		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+	}
 
 }
