@@ -1,5 +1,9 @@
 package com.movie.bookmyshow.service;
 
+import java.util.List;
+
+import com.movie.bookmyshow.dto.TheatreResponseDto;
+
 /**
  * 
  * @author Sushil
@@ -7,6 +11,8 @@ package com.movie.bookmyshow.service;
  */
 public interface TheatreService {
 	
-	public int getAvailableSeatBasedOnThreatre(String theatreName);
+
+
+	public List<TheatreResponseDto> getAllTheatres(String movieId);
 
 }
