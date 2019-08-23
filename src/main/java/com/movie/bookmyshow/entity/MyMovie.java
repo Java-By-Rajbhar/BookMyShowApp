@@ -1,6 +1,6 @@
 package com.movie.bookmyshow.entity;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +25,9 @@ public class MyMovie {
 	private Integer ticketId;
 	private Integer movieId;
 	private Integer theatreId; 
-	private LocalDate bookDate;
+	private Date bookDate;
 	private String emailId;
+	private Integer totalSeat;
+	private Double price;
 
 }
