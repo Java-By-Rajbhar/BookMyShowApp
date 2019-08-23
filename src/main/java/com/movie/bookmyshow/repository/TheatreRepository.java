@@ -13,7 +13,7 @@ import com.movie.bookmyshow.entity.Theatre;
  *
  */
 @Repository
-public interface TheatreRepository extends JpaRepository<Theatre, Long> {
+public interface TheatreRepository extends JpaRepository<Theatre, Integer> {
 	
 	public Theatre findByTheatreName(String theatreName);
 
