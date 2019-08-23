@@ -25,7 +25,7 @@ public class MyMovie {
 	private Integer ticketId;
 	private Integer movieId;
 	private Integer theatreId; 
-	private Date bookDate;
+	private String bookDate;
 	private String emailId;
 	private Integer totalSeat;
 	private Double price;

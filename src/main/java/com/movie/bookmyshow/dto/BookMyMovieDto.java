@@ -13,7 +13,7 @@ public class BookMyMovieDto implements Serializable{
 
 	private int movieId;
 	private int theatreId;
-	private Date bookDate;
+	private String bookDate;
 	private String emailId;
 	private double price;
 	private int totalSeat;
